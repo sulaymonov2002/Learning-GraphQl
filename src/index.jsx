@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as ReactDOM from "react-dom/client";
 import App from "./App";
 
@@ -8,7 +8,6 @@ import {
   ApolloProvider,
   useQuery,
   gql,
-  useLazyQuery,
   useMutation,
 } from "@apollo/client";
 
@@ -127,6 +126,7 @@ function Text() {
   return (
     <ApolloProvider client={client}>
       <div>
+        <App />
         <h2>Building Query components 🚀</h2>
         <AddTodo />
         <Todos />
@@ -138,7 +138,6 @@ function Text() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <App />
     <Text />
   </>
 );
