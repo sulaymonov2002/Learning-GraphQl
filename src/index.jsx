@@ -126,7 +126,6 @@ function Text() {
   return (
     <ApolloProvider client={client}>
       <div>
-        <App />
         <h2>Building Query components 🚀</h2>
         <AddTodo />
         <Todos />
@@ -138,6 +137,7 @@ function Text() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
+    <App />
     <Text />
   </>
 );
